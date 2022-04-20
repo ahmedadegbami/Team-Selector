@@ -31,28 +31,28 @@ function addNewmember(event) {
 let team = document.getElementById("teams-number");
 function addteam() {
   team.innerHTML = parseInt(team.innerHTML) + 1;
-  rowNode.innerHTML += `<div class="col-3 ">
-          <div class="card bg-primary">
-            <div class="card-header">Team ${team.innerHTML}</div>
-            <ul  class="list-group list-group-flush newlist"></ul>
-          </div>
-        </div>`;
+  // rowNode.innerHTML += `<div class="col-3 ">
+  //         <div class="card bg-primary">
+  //           <div class="card-header">Team ${team.innerHTML}</div>
+  //           <ul  class="list-group list-group-flush newlist"></ul>
+  //         </div>
+  //       </div>`;
 }
 
-function removeteam() {
-  let teamsList = document.querySelectorAll(".newlist");
-  let lastTeam = teamsList[teamsList.length - 1];
-  let teamMembers = lastTeam.querySelectorAll("li");
-  for (let i = 0; i < teamMembers.length; i++) {
-    let listNode = document.createElement("li");
-    listNode.classList.add("list-group-item");
-    listNode.innerHTML = teamMembers[i].innerHTML;
-    ulwaitingNode.appendChild(listNode);
-  }
+// function removeteam() {
+//   let teamsList = document.querySelectorAll(".newlist");
+//   let lastTeam = teamsList[teamsList.length - 1];
+//   let teamMembers = lastTeam.querySelectorAll("li");
+//   for (let i = 0; i < teamMembers.length; i++) {
+//     let listNode = document.createElement("li");
+//     listNode.classList.add("list-group-item");
+//     listNode.innerHTML = teamMembers[i].innerHTML;
+//     ulwaitingNode.appendChild(listNode);
+//   }
 
-  team.innerHTML = parseInt(team.innerHTML) - 1;
-  rowNode.removeChild(rowNode.lastChild);
-}
+//   team.innerHTML = parseInt(team.innerHTML) - 1;
+//   rowNode.removeChild(rowNode.lastChild);
+// }
 
 function assign() {
   for (let i = 0; i < 1; i++) {
